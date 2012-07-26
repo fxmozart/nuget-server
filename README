@@ -1,0 +1,24 @@
+Make a nuget local server in 1 minute by downloading this source , and publish it to IIS.
+
+
+All needed is to :
+
+Edit those 2 values (though package path can be left alone , it will just put package under the IIS/packages.):
+
+To make your own Api key, just use tool visual studio make new guid, paste and done...You have a local(also accessible remotely if you open your firewall/router) nuget server to:
+
+Push , download, etc your packages.
+
+
+2 values to edit :
+
+
+
+
+   <add key="apiKey" value="CC73A21A-269D-40A1-9DBD-BE5E0CED447B" />
+      <!--
+          Change the path to the packages folder. Default is ~/Packages.
+          This can be a virtual or phsyical path.
+      -->
+      <add key="packagesPath" value="~/" />
+
